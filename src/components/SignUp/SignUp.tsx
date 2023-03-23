@@ -57,20 +57,14 @@ const theme = createTheme();
       alert('Enter email and password')
     }
     if(isSignup){
-      // if not filled name in signup page its show this alert
       if(!name){
         alert("enter a name to continue")
 
 
       }
-      //dispatch signup function
       dispatch(SignUp({name, email, password}, navigate))
       
     }
-    //else{
-      // dispatch login function
-      // dispatch(LogIn({email, password},navigate))
-    //}
     
   };
 
@@ -150,12 +144,6 @@ const theme = createTheme();
                   onChange={(e) => {setPassword(e.target.value)}}
                 />
               </Grid>
-              {/* <Grid item xs={12}>
-                <FormControlLabel
-                  control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I want to receive inspiration, marketing promotions and updates via email."
-                />
-              </Grid> */}
             </Grid>
             <Button
               type="submit"
