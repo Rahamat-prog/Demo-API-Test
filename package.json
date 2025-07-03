@@ -36,6 +36,11 @@
       "react-app/jest"
     ]
   },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!(axios)/)"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -49,6 +54,6 @@
     ]
   },
   "devDependencies": {
-    "typescript": "^5.0.2"
+    "typescript": "^4.9.5"
   }
 }

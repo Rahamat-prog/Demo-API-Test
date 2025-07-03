@@ -13,8 +13,9 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {useState} from 'react';
-import{ useDispatch} from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { register } from '../../app/reducers/auth'
+import { useAppDispatch } from '../../app/hooks'
 
 const theme = createTheme();
 
@@ -24,7 +25,7 @@ const theme = createTheme();
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const navigate = useNavigate()
   //till here
   // const [state, setState] = useState({
@@ -62,7 +63,7 @@ const theme = createTheme();
 
 
       }
-      dispatch(SignUp({name, email, password}, navigate))
+      dispatch(register({username: name, email, password}))
       
     }
     
